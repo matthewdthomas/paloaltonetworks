@@ -82,16 +82,46 @@
                 "description": "SSH rsa public key file as a string."
             }
         },
-        "vmSize": {
-            "type": "string",
-            "allowedValues": [
-                "Standard_D3",
-                "Standard_D4"
-            ],
-            "metadata": {
-                "description": "Azure VM size for VM-Series"
-            }
-        },
+        "imageVersion": {
+          "type": "string",
+          "defaultValue": "latest",
+          "allowedValues": [
+              "7.1.1",
+              "8.0.0",
+              "10.1.0",
+              "10.1.8"
+          ],
+          "metadata": {
+              "description": "PAN-OS version."
+          }
+      },    
+      "imageSku": {
+          "type": "string",
+          "defaultValue": "byol",
+          "allowedValues": [
+              "byol",
+              "bundle1",
+              "bundle2"
+          ],
+          "metadata": {
+              "description": "VM-Series model: BYOL or hourly pay-as-you-go (PAYG): Bundle 1 or Bundle 2"
+          }
+      },
+"vmSize": {
+          "type": "string",
+          "allowedValues": [
+              "Standard_D3",
+              "Standard_D3_v2",
+              "Standard_D4", 
+              "Standard_D4_v2",
+              "Standard_D5",
+              "Standard_D5_v2",
+              "Standard_A4"		    
+          ],
+          "metadata": {
+              "description": "Azure VM size for VM-Series"
+          }
+      },
         "srcIPInboundNSG": {
             "type": "string",
             "metadata": {

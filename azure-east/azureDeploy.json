@@ -82,11 +82,48 @@
                 "description": "SSH rsa public key file as a string."
             }
         },
+        "imageVersion": {
+            "type": "string",
+            "defaultValue": "latest",
+            "allowedValues": [
+                "7.1.1",
+                "8.0.0",
+                "8.0.17",
+                "8.1.0",
+                "8.1.9",
+                "9.0.1",
+                "9.0.4",
+                "9.1.0",
+                "10.1.0",
+                "10.1.8"
+            ],
+            "metadata": {
+                "description": "PAN-OS version."
+            }
+        }, 
+        "imageSku": {
+            "type": "string",
+            "defaultValue": "byol",
+            "allowedValues": [
+                "byol",
+                "bundle1",
+                "bundle2"
+            ],
+            "metadata": {
+                "description": "VM-Series model: BYOL or hourly pay-as-you-go (PAYG): Bundle 1 or Bundle 2"
+            }
+        }, 
         "vmSize": {
             "type": "string",
+            "defaultValue": "Standard_D3_v2",
             "allowedValues": [
-                "Standard_DS3_v2",
-                "Standard_DS4_v2"
+                "Standard_D3",
+		        "Standard_D3_v2",
+                "Standard_D4", 
+		        "Standard_D4_v2",
+		        "Standard_D5",
+		        "Standard_D5_v2",
+                "Standard_A4"	    
             ],
             "metadata": {
                 "description": "Azure VM size for VM-Series"
@@ -94,6 +131,7 @@
         },
         "srcIPInboundNSG": {
             "type": "string",
+            "defaultValue": "0.0.0.0/0",
             "metadata": {
                 "description": "Your source public IP address. Added to the inbound DefaultNSG on eth0 (MGMT)"
             }
@@ -119,6 +157,13 @@
         "description": "Virtual network address CIDR"
       }
     },
+    "vnetcustomid": {
+        "type": "string",
+        "defaultValue": "/subscriptions/f97784a3-bcbd-4355-982f-c4c8af75e376/resourceGroups/rg-networking-east/providers/Microsoft.Network/virtualNetworks/vnet-core-eastus",
+        "metadata": {
+          "description": "Mgmt subnet start address"
+        }
+      },
     "subnet0Name": {
       "type": "string",
       "defaultValue": "FirewallManagementSubnet",
