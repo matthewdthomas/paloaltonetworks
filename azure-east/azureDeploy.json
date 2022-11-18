@@ -309,7 +309,7 @@
     }, {
         "apiVersion": "[variables('apiVersion')]",
         "type": "Microsoft.Network/networkSecurityGroups",
-        "name": "[concat(parameters('vmName'), '-NSG')]",
+        "name": "[concat(parameters('vmName'), '-DefaultNSG')]",
         "location": "[parameters('location')]",
         "properties": {
             "securityRules": [{
