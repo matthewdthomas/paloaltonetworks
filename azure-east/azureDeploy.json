@@ -103,7 +103,7 @@
 		"metadata": {
 			"artifactsBaseUrl": ""
 		},
-		"defaultValue": "https://raw.githubusercontent.com/matthewdthomas/paloaltonetworks/master/azure-east/?token=GHSAT0AAAAAAB3LXEJLXJJETN5G4G6OYHZCY3XWVKQ"
+		"defaultValue": "https://raw.githubusercontent.com/matthewdthomas/paloaltonetworks/master/azure-east/"
 	},
     "virtualNetworkName": {
       "type": "string",
